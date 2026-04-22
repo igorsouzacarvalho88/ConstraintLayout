@@ -7,32 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button_a"
-        android:layout_width="0dp"
-        app:layout_constraintVertical_chainStyle="packed"
-        android:layout_height="wrap_content"
-        android:text="Buttom A"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/button_b"/>
 
-    <Button
-        android:id="@+id/button_b"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Buttom B"
-        app:layout_constraintBottom_toTopOf="@id/button_c"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_a" />
-
-    <Button
-        android:id="@+id/button_c"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Buttom C"
-        app:layout_constraintTop_toBottomOf="@id/button_b"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
