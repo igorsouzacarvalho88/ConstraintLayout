@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ConstraintLayout</string>
+    <string name="name">Olá, Nome e Sobrenome</string>
+    <string name="what_learn_today">O que vamos aprender Hoje?</string>
+    <string name="popular_courses">Cursos Populares</string>
+    <string name="see_all">Ver Todos</string>
+    <string name="android_development">Desenvolvimento Android</string>
 </resources>
