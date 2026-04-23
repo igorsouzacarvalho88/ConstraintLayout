@@ -5,8 +5,85 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
     tools:context=".MainActivity">
 
+    <View
+        android:id="@+id/view_head_backgroud"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@color/brown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageview_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:contentDescription="Voltar"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="@id/view_head_backgroud"
+        app:layout_constraintTop_toTopOf="@id/view_head_backgroud"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/textview_recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/architects_daughter"
+        android:text="Capuccino"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_head_backgroud"
+        app:layout_constraintEnd_toEndOf="@id/view_head_backgroud"
+        app:layout_constraintStart_toStartOf="@id/view_head_backgroud"
+        app:layout_constraintTop_toTopOf="@id/view_head_backgroud" />
+
+    <ImageView
+        android:id="@+id/imageview_clock"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:tint="@color/brown"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:src="@drawable/ic_clock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imageview_favorite"
+        app:layout_constraintTop_toBottomOf="@id/view_head_backgroud" />
+
+    <ImageView
+        android:id="@+id/imageview_favorite"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_favorite"
+        android:tint="@color/brown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageview_clock"
+        app:layout_constraintTop_toBottomOf="@id/view_head_backgroud" />
+
+    <TextView
+        android:id="@+id/textview_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atomic_age"
+        android:layout_marginTop="8dp"
+        android:text="15 minutos"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/imageview_clock"
+        app:layout_constraintStart_toStartOf="@id/imageview_clock"
+        app:layout_constraintTop_toBottomOf="@id/imageview_clock" />
+    <TextView
+        android:id="@+id/textview_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="54.210"
+        android:textSize="16sp"
+        android:fontFamily="@font/atomic_age"
+        app:layout_constraintTop_toBottomOf="@id/imageview_favorite"
+        app:layout_constraintStart_toStartOf="@id/imageview_favorite"
+        app:layout_constraintEnd_toEndOf="@id/imageview_favorite"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
