@@ -12,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:background="@color/brown"
+        android:contentDescription="@string/head"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +22,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_margin="16dp"
-        android:contentDescription="Voltar"
+        android:contentDescription="@string/arrow_back"
         android:src="@drawable/ic_arrow_back"
         app:layout_constraintStart_toStartOf="@id/view_head_backgroud"
         app:layout_constraintTop_toTopOf="@id/view_head_backgroud"
@@ -31,8 +32,9 @@
         android:id="@+id/textview_recipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/recipe_type"
         android:fontFamily="@font/architects_daughter"
-        android:text="Capuccino"
+        android:text="@string/recipe"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@id/view_head_backgroud"
@@ -45,11 +47,12 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
-        android:tint="@color/brown"
-        app:layout_constraintHorizontal_chainStyle="spread"
+        android:contentDescription="@string/clock"
         android:src="@drawable/ic_clock"
-        app:layout_constraintStart_toStartOf="parent"
+        android:tint="@color/brown"
         app:layout_constraintEnd_toStartOf="@id/imageview_favorite"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view_head_backgroud" />
 
     <ImageView
@@ -57,6 +60,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
+        android:contentDescription="@string/favorite"
         android:src="@drawable/ic_favorite"
         android:tint="@color/brown"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,22 +72,136 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/atomic_age"
-        android:layout_marginTop="8dp"
-        android:text="15 minutos"
+        android:text="@string/time"
+        android:textColor="@color/brown"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/imageview_clock"
         app:layout_constraintStart_toStartOf="@id/imageview_clock"
         app:layout_constraintTop_toBottomOf="@id/imageview_clock" />
+
     <TextView
         android:id="@+id/textview_favorite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="54.210"
-        android:textSize="16sp"
         android:fontFamily="@font/atomic_age"
-        app:layout_constraintTop_toBottomOf="@id/imageview_favorite"
-        app:layout_constraintStart_toStartOf="@id/imageview_favorite"
+        android:text="@string/favorite_number"
+        android:textColor="@color/brown"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/imageview_favorite"
-        />
+        app:layout_constraintStart_toStartOf="@id/imageview_favorite"
+        app:layout_constraintTop_toBottomOf="@id/imageview_favorite" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/brown"
+        android:contentDescription="Barra para dividir corpo do topo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_time" />
+
+    <TextView
+        android:id="@+id/textview_recipe_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/resume_about_recipe"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/recipe_description"
+        android:textColor="@color/brown"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_divider" />
+
+    <TextView
+        android:id="@+id/textview_ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/about_ingredients"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Ingredientes"
+        android:textColor="@color/brown"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_recipe_description" />
+
+    <ImageView
+        android:id="@+id/imageview_ingredient_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/first_ingredient"
+        android:src="@drawable/ic_chevron_right"
+        android:tint="@color/brown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_ingredients" />
+
+    <TextView
+        android:id="@+id/textview_ingredient_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/basic"
+        android:text="@string/shot_of_espresso"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imageview_ingredient_1"
+        app:layout_constraintStart_toEndOf="@id/imageview_ingredient_1"
+        app:layout_constraintTop_toTopOf="@id/imageview_ingredient_1" />
+
+    <ImageView
+        android:id="@+id/imageview_ingredient_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/second_ingredient"
+        android:src="@drawable/ic_chevron_right"
+        android:tint="@color/brown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageview_ingredient_1" />
+
+    <TextView
+        android:id="@+id/textview_ingredient_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/basic"
+        android:text="@string/shot_of_milk"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imageview_ingredient_2"
+        app:layout_constraintStart_toEndOf="@id/imageview_ingredient_2"
+        app:layout_constraintTop_toTopOf="@id/imageview_ingredient_2" />
+
+    <ImageView
+        android:id="@+id/imageview_ingredient_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/third_ingredient"
+        android:src="@drawable/ic_chevron_right"
+        android:tint="@color/brown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageview_ingredient_2" />
+
+    <TextView
+        android:id="@+id/textview_ingredient_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/basic"
+        android:text="@string/shot_of_chocolate"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imageview_ingredient_3"
+        app:layout_constraintStart_toEndOf="@id/imageview_ingredient_3"
+        app:layout_constraintTop_toTopOf="@id/imageview_ingredient_3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

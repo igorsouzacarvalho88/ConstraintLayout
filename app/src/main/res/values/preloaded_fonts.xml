@@ -3,5 +3,6 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/architects_daughter</item>
         <item>@font/atomic_age</item>
+        <item>@font/basic</item>
     </array>
 </resources>

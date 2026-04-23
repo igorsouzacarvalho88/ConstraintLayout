@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">ConstraintLayout</string>
-
+    <string name="head">Topo</string>
+    <string name="arrow_back">Voltar</string>
+    <string name="favorite">Favorito</string>
+    <string name="clock">Tempo de Preparo</string>
+    <string name="time">15 minutos</string>
+    <string name="resume_about_recipe">Resumo sobre a receita</string>
+    <string name="about_ingredients">Ingredientes</string>
+    <string name="ingredients">Ingredientes</string>
+    <string name="first_ingredient">Primeiro Ingrediente</string>
+    <string name="second_ingredient">Segundo Ingrediente</string>
+    <string name="third_ingredient">Terceiro Ingrediente</string>
+    <string name="shot_of_espresso">1 Dose de Expresso.</string>">
+    <string name="shot_of_milk">100ml de Leite.</string>
+    <string name="shot_of_chocolate">1 colher de chocolate em pó.</string>"
+    <string name="favorite_number">51.280</string>
+    <string name="recipe_description">Uma simples e perfeita bebida quente, o cappuccino é extraída da dose de expresso misturado com leite fresco e chocolate, criando uma bebida cheia de sabor. </string>
+    <string name="recipe_type">Bebida</string>
+    <string name="recipe">Capuccino</string>
 </resources>
